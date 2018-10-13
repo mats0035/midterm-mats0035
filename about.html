@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aya Matsubara - About</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,800" rel="stylesheet">
+  <link rel="stylesheet" href="./css/min/main.css">
+  <link rel="stylesheet" href="./css/min/about.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html"><img id="logo-image" src="./img/logo.svg" alt=""></a>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="index.html#location">LOCATION</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </header>
+  <main>
+    <div id="about-me">
+      <h2>About Me</h2>
+      <p>Hello!<br>I'm Aya Matsubara. I am an Interactive Media Designer / Developer who loves travelling and
+        photography.</p>
+      <p>If you like this website, please see my other works on <strong><a href="https://ayamatsubara.com" id="portfolio"
+            target="_blank">my portfolio</a></strong>!</p>
+    </div>
+
+    <!-- Contact form -->
+
+    <form action="mailto:mats0035@algonquincollege.com?subject=Message%20about%20Travel%20Phpotography" method="post"
+      name="contactform" id="contactform">
+      <h2>Contact</h2>
+      <label for="fname"></label>
+      <input type="text" id="fname" name="name" placeholder="Name*" autocomplete="off" value="" required>
+      <label for="fmail"></label>
+      <input type="text" id="fmail" name="mail" placeholder="Email*" autocomplete="off" value="" required>
+      <label for="fmessage"></label>
+      <textarea id="fmessage" cols="30" rows="10" style="overflow:auto" placeholder="Message*" value="" required></textarea>
+      <input type="submit" id="send" name="send" value="Send">
+    </form>
+
+  </main>
+  <footer>
+    © 2018 AYA MATSUBARA
+  </footer>
+  <script src="./js/sendmessage.js" charset="utf-8"></script>
+</body>
+
+</html>

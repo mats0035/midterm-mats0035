@@ -1,0 +1,60 @@
+h1 {
+  color: #c62f28;
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  margin: 0;
+  padding-top: 80px;
+
+}
+#gallery {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  margin: 30px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+#modal {
+  background: #111;
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.modal-image {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  min-width: 380px;
+  height: auto;
+  margin: auto;
+  z-index:1000;
+}
+
+#close, .modal-text {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+#close {
+  bottom: 5%;
+}

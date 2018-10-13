@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aya Matsubara - Travel Photography</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,800" rel="stylesheet">
+  <link rel="stylesheet" href="./css/min/main.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html"><img src="./img/logo.svg" alt=""></a>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="index.html#location">LOCATION</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </header>
+  <main>
+    <div id="front-page">
+      <div id="slideshow">
+        <img class="slideshow-img" src="./img/top_slovakia.jpg" alt="">
+        <img class="slideshow-img" src="./img/top_croatia.jpg" alt="">
+        <img class="slideshow-img" src="./img/top_austria.jpg" alt="">
+        <img class="slideshow-img" src="./img/top_france.jpg" alt="">
+        <div id="arrows">
+          <i id="left" onclick="changeSlide(-1)"></i>
+          <i id="right" onclick="changeSlide(1)"></i>
+        </div>
+      </div>
+      <div id="scroll">scroll
+        <div id="scroll-line"></div>
+      </div>
+    </div>
+
+    <div id="location">
+      <div id="map">
+        <h1>CHOOSE A LOCATION</h1>
+        <img src="./img/map.png" alt="">
+      </div>
+    </div>
+  </main>
+  <footer>
+    © 2018 AYA MATSUBARA
+  </footer>
+  <!-- <script src="./js/common.js" charset="utf-8"></script> -->
+  <script src="./js/slideshow.js" charset="utf-8"></script>
+</body>
+
+</html>
