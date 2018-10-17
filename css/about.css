@@ -297,7 +297,6 @@ template {
 [hidden] {
   display: none; }
 
-/* Global variable scope */
 @font-face {
   font-family: Didot;
   src: url(../../font/didot_bold.ttf); }

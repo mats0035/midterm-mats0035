@@ -59,8 +59,8 @@ header {
   }
 }
 
+// Mobile and Tablet View: Hamburger menu
 @media (max-width: 768px) {
-  // Hamburger menu
   header nav {
     position: fixed;
     top: 20px;
