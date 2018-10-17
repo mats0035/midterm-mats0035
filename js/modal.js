@@ -8,31 +8,68 @@ const country = document.getElementById('country').textContent.toLowerCase()
 const franceTxt = [
   'Paris, Eiffel Tower',
   'Paris, Palace of Versailles',
-  'Paris,Seine River',
-  'Renne, Street'
+  'Paris, Seine River',
+  'Renne, Street',
+  'Mont Saint Michel, Signs',
+  'Paris, Street in Montmartre',
+  'Paris, Art market',
+  'Paris, Pont Saint-Michel'
 ]
 const croatiaTxt = [
-  'Paris, Eiffel Tower',
-  'Paris, Palace of Versailles',
-  'Paris,Seine River',
-  'Renne, Street'
+  'Dubrovnik, The walled city',
+  'Dubrovnik, street restaurants',
+  'Dubrovnik, Old town',
+  'Dubrovnik, Street in the old town',
+  'Plitvice, Plitvice Lakes',
+  'Plitvice, Trail at Plitvice Lakes',
+  'Zagreb, St. Mark\'s Church',
+  'Zagreb, Jelacic Square'
 ]
 const germanyTxt = [
-  'Paris, Eiffel Tower',
-  'Paris, Palace of Versailles',
-  'Paris,Seine River',
-  'Renne, Street'
+  'Frankfurt, Eiserner Steg Bridge',
+  'Munich, Marienplatz',
+  'Munich, Marienplatz Clock Tower',
+  'Noerdlingen, Walled medieval town',
+  'Munich, Munich train station',
+  'Munich, Old city',
+  'Augusburg, Coulorful house'
+]
+const northTxt = [
+  'Helsinki, Orthodox church',
+  'Helsinki, City view',
+  'Estonia, Old town in Tallinn',
+  'Estonia, Street painter',
+  'Estonia, Just married bride',
+  'Stockholm, Lake Malaren',
+  'Stockholm, Gamla stan, old town',
+  'Stockholm, Lake Malaren'
+]
+const polandTxt = [
+  'Krakow, Main Square',
+  'Krakow, Restaurant in the old town',
+  'Krakow, Main Square',
+  'Krakow, Wawel Castle',
+  'Slovakia, Spis Castle',
+  'Bratislava, St. Martin\'s Cathedral',
+  'Bratislava, Statue of Cumil the Sewer Worker',
+  'Bratislava, Bratislava Castle'
 ]
 // Set the text array
 switch (country) {
   case 'france':
     var text = franceTxt
+    break;
   case 'croatia':
     var text = croatiaTxt
+    break;
   case 'germany':
     var text = germanyTxt
+    break;
+  case 'poland / slovakia':
+    var text = polandTxt
+    break;
 }
-
+console.log(text)
 // addModalDivs(): Get the gallery images, replicate them with
 // new IDs(modal-imageX) and add the corresponding texts(modal-textX)
 function addModalDivs() {
@@ -67,9 +104,11 @@ function openModal() {
 
 // hideElements(): Hide the modal window
 function hideElements(closeImg, closeTxt) {
+  const button = document.getElementById('close')
   closeImg.style.display = 'none'
   modalBack.style.display = 'none'
   closeTxt.style.display = 'none'
+  button.style.display = 'none'
   // Add an eventlistener to open the modal window
   openModal()
 }
