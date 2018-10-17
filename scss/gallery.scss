@@ -119,6 +119,7 @@ h1 {
   }
 }
 
+// Change the number of rows based on the number of columns
 @media (max-width: 1364px) {
   #container {
     grid-template-rows: repeat(3, 300px);    
@@ -130,6 +131,7 @@ h1 {
     grid-template-rows: repeat(4, 300px);    
   }
 }
+
 @media (max-width: 704px) {
   #container {
     grid-template-rows: repeat(8, 300px);    

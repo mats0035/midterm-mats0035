@@ -26,9 +26,6 @@ function showSlide(n) {
   slides[index - 1].style.display = 'block'
 }
 
-let index = 1
-showSlide(index)
-
 // Automatic slideshow
 function carousel() {
   const slides = document.getElementsByClassName('slideshow-img')
@@ -42,23 +39,12 @@ function carousel() {
   slides[slideIndex - 1].style.display = 'block'
   setTimeout(carousel, 3000)
 }
-let slideIndex = 0
-carousel()
 
-// const image = document.getElementsByClassName('slideshow-img')
-// const right = document.getElementById('right')
-// let index
-//
-// for (let i = 0; i < image.length; i++) {
-//   right.addEventListener('click', () => {
-//     if (i === 0) {
-//       j = i + 1
-//     } else if (i === image.length - 1) {
-//       j = 0
-//     } else {
-//       j = i + 1
-//     }
-//     image[i].classList.remove('show-img')
-//     image[j].classList.add('show-img')
-//   })
-// }
+let index = 1
+let slideIndex = 0
+
+// Manual slideshow
+showSlide(index)
+
+// Automatic slideshow
+carousel()

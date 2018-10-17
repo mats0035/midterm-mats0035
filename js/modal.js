@@ -68,7 +68,8 @@ function closeModal(closeImgId, closeTxtId) {
   })
 }
 
-// Create divs for the modal window
+// Create divs for modal windows
 addModalElements()
-// modal the gallery image
+
+// Set eventlisters for modal windows 
 openModal()

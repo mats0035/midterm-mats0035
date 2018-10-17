@@ -34,9 +34,11 @@ main {
       border: none;
       box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.1) inset;
     }
+
     input:nth-last-child(2) {
       height: 10rem;
     }
+
     #send {
       background-color: $brand-color;
       box-shadow: none;
@@ -49,6 +51,7 @@ main {
   } 
 }
 
+// Mobile/Tablet View
 @media (max-width: 768px) {
   main {
     flex-direction: column;
