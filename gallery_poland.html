@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aya Matsubara - Photos of Poland/Slovakia</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Nunito+Sans:300,800" rel="stylesheet">
-  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/min/main.css">
   <link rel="stylesheet" href="./css/min/gallery.css">
 </head>
@@ -18,28 +15,60 @@
     <div id="logo">
       <a href="index.html"><img id="logo-image" src="./img/logo.svg" alt=""></a>
     </div>
-    <nav id="main-nav">
-      <a href="index.html">HOME</a>
-      <a href="index.html#location">LOCATION</a>
-      <a href="about.html">ABOUT</a>
+    <nav>
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="links">
+        <a href="index.html">HOME</a>
+        <a href="index.html#location">LOCATION</a>
+        <a href="about.html">ABOUT</a>
+      </div>
     </nav>
   </header>
   <h1 id="country">Poland / Slovakia</h1>
-  <div id="gallery">
-    <img class="photos" src="img/poland-slovakia/poland_01.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/poland_02.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/poland_03.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/poland_04.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/slovakia_01.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/slovakia_02.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/slovakia_03.jpg" alt="">
-    <img class="photos" src="img/poland-slovakia/slovakia_04.jpg" alt="">
+  <div id="container">
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/poland_01.jpg" alt="">
+      <p class="photo-text">Krakow, Main Square</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/poland_02.jpg" alt="">
+      <p class="photo-text">Krakow, Restaurant in the old town</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/poland_03.jpg" alt="">
+      <p class="photo-text">Krakow, Main Square</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/poland_04.jpg" alt="">
+      <p class="photo-text">Krakow, Wawel Castle</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/slovakia_01.jpg" alt="">
+      <p class="photo-text">Slovakia, Spis Castle</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/slovakia_02.jpg" alt="">
+      <p class="photo-text">Bratislava, St. Martin's Cathedral</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/slovakia_03.jpg" alt="">
+      <p class="photo-text">Bratislava, Statue of Cumil the Sewer Worker</p>
+    </div>
+    <div class="gallery">
+      <img class="photos" src="img/poland-slovakia/slovakia_04.jpg" alt="">
+      <p class="photo-text">Bratislava, Bratislava Castle</p>
+    </div>
   </div>
   <div id="modal"></div>
   <div class="search-button">
     <a href="./index.html#location">Back to the location Search</a>
   </div>
-  <footer>© 2018 AYA MATSUBARA</footer>
+  <footer>
+    <div id="copyright">© 2018 AYA MATSUBARA</div>
+  </footer>
   <script src="js/modal.js" charset="utf-8"></script>
 </body>
 

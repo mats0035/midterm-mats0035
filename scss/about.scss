@@ -1,3 +1,6 @@
+@import 'normalize';
+@import 'base';
+
 body {
   background-color: #eee;
 }
@@ -6,13 +9,13 @@ main {
   display: flex;
   justify-content: center;
   align-items:baseline;
-
+  min-height: calc(100vh - 34px);
   #about-me {
     width: 40%;
     margin: 100px 20px;
   
     #portfolio {
-      color: #c62f28;
+      color: $brand-color;
     }
   }
 
@@ -23,12 +26,11 @@ main {
     justify-content: space-around;
     padding: 20px;
     width: 40%;
-    margin: 100px 20px;
   
     input, textarea {
       margin: 10px;
       padding: 5px;
-      width: 90%;
+      width: 100%;
       border: none;
       box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.1) inset;
     }
@@ -36,19 +38,24 @@ main {
       height: 10rem;
     }
     #send {
-      background-color: #c62f28;
+      background-color: $brand-color;
       box-shadow: none;
       margin: 20px 30px;
       padding: 10px;
       width: 100px;
       align-self: flex-start;
-      color: #fff;
+      color: $sub-text-color;
     }
   } 
 }
-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items:center;
+
+    #about-me, form {
+      width: 80%;
+    }
+  }
 }

@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aya Matsubara - Travel Photography</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,800" rel="stylesheet">
   <link rel="stylesheet" href="./css/min/main.css">
 </head>
 
@@ -18,9 +15,15 @@
       <a href="index.html"><img src="./img/logo.svg" alt=""></a>
     </div>
     <nav>
-      <a href="index.html">HOME</a>
-      <a href="index.html#location">LOCATION</a>
-      <a href="about.html">ABOUT</a>
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="links">
+        <a href="index.html">HOME</a>
+        <a href="index.html#location">LOCATION</a>
+        <a href="about.html">ABOUT</a>
+      </div>
     </nav>
   </header>
   <main>
@@ -41,14 +44,62 @@
     </div>
 
     <div id="location">
+      <h1>CHOOSE A LOCATION</h1>
       <div id="map">
-        <h1>CHOOSE A LOCATION</h1>
-        <img src="./img/map.png" alt="">
+        <img src="./img/worldmap.png" alt="">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 499.13 265.96">
+          <rect class="cls-1" width="499.13" height="265.96" />
+          <a xlink:href="gallery_north.html">
+            <circle id="spot-1" class="cls-2" cx="260.49" cy="62.22" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(130 167.22)">Estonia / Sweden</text>
+          </a>
+          <a xlink:href="gallery_croatia.html">
+            <circle id="spot-2" class="cls-2" cx="258.92" cy="88.82" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(200 167.22)">Croatia</text>
+          </a>
+          <a xlink:href="gallery_germany.html">
+            <circle id="spot-3" class="cls-2" cx="251.42" cy="81.9" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(190 167.22)">Germany</text>
+          </a>
+          <a xlink:href="gallery_poland.html">
+            <circle id="spot-4" class="cls-2" cx="265.41" cy="77.78" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(130 167.22)">Poland / Slovakia</text>
+          </a>
+          <a xlink:href="gallery_canada.html">
+            <circle id="spot-5" class="cls-2" cx="129.33" cy="89.77" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(190 167.22)">Canada</text>
+          </a>
+          <a xlink:href="gallery_france.html">
+            <circle id="spot-6" class="cls-2" cx="239.42" cy="86.9" r="3.48" />
+            <text id="title1" class="cls-3" transform="translate(200 167.22)">France</text>
+          </a>
+        </svg>
+        <div class="country-list">
+          <a href="gallery_canada.html">
+            <h3>Canada</h3>
+          </a>
+          <a href="gallery_croatia.html">
+            <h3>Croatia</h3>
+          </a>
+          <a href="gallery_germany.html">
+            <h3>Germany</h3>
+          </a>
+          <a href="gallery_france.html">
+            <h3>France</h3>
+          </a>
+          <a href="gallery_north.html">
+            <h3>Estonia / Sweden</h3>
+          </a>
+          <a href="gallery_poland.html">
+            <h3>Poland / Slovakia</h3>
+          </a>
+        </div>
       </div>
     </div>
   </main>
-  <footer>© 2018 AYA MATSUBARA</footer>
-  <!-- <script src="./js/common.js" charset="utf-8"></script> -->
+  <footer>
+    <div id="copyright">© 2018 AYA MATSUBARA</div>
+  </footer>
   <script src="./js/slideshow.js" charset="utf-8"></script>
 </body>
 

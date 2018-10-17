@@ -1,80 +1,10 @@
-/* Global variable scope */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
+@import 'normalize';
+@import 'base';
+@import 'header';
+@import 'footer';
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-body {
-  margin: 0;
-  color: #333;
-  font-family: 'Nunito Sans', sans-serif;
-}
-h1, h2, h3 {
-  text-align: center;
-}
-/* Local settings */
-header {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  height: 70px;
-  background-color: #fff;
-  z-index: 100;
-
-  &::before {
-    content: " ";
-    border-top: 5px solid #c62f28;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-  }
-  
-  #logo {
-    flex-grow: 2;
-    height: 100%;
-
-    img {
-      height: 100%;
-      margin: 5px;
-      padding: 15px;
-    }
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-grow: 1;
-    height: 100%;
-    margin: 0;
-
-    & a:hover {
-      color: #c62f28;
-    }
-    & a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #c62f28;
-      transition: width 0.3s;
-    }
-    & a:hover::after {
-      width: 100%;
-    }
-  }
-}
-
-a:nth-child(n) {
-  text-decoration: none;
-  color: #333;
-}
-
+// Desktop View
+// Setting for the top slideshow area
 #front-page {
   height: 100vh;
 
@@ -89,16 +19,6 @@ a:nth-child(n) {
       height: 450px;
       margin: auto;
       transform: translate(-50%, -50%);
-      /* animation: show 2s; */
-    }
-
-    @keyframes show {
-      from{
-        width: 0;
-      }
-      to{
-        width: 884px;
-      }
     }
 
     #arrows {
@@ -107,18 +27,18 @@ a:nth-child(n) {
       bottom: 0;
       left: 0;
       right: 0;
+      max-width: 860px;
       margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 860px;
 
       #left, #right {
-        border: solid #fff;
-        border-width: 0 5px 5px 0;
         display: inline-block;
         padding: 10px;
         margin: 0 5px;
+        border: solid #fff;
+        border-width: 0 5px 5px 0;
       }
       
       #left {
@@ -135,49 +55,107 @@ a:nth-child(n) {
 
   #scroll {
     position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 8%;
 
     #scroll-line {
-      background-color: #333;
       width: 2px;
       height: 30px;
       margin:5px;
+      background-color: $text-color;
     }
   }
 }
 
+// Setting for the bottom map area
 #location {
-  background: url(../../img/paper_background.jpg) center center / cover;
   position: relative;
-  height: 100%;
-  text-align: center;
+  height: 100vh;
+  background: url(../../img/paper_background.jpg);
+  background-size: cover;
+
+  h1 {
+    padding-top: 120px;
+    color: #fff;
+  }
 
   #map {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    img, svg {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      height: 70%;
+      margin: auto;
+      transform: translateX(-50%);
 
-    h1 {
-      color: #fff;
+      .cls-1 {
+        fill: none;
+      }
+
+      // Location name setting
+      .cls-3 {
+        font-size: 30px;
+        fill: $brand-color;
+        font-family: Didot-Bold, Didot;
+        font-weight: 700;
+        opacity: 0;
+      }
+      //  Yellow circle buttons
+      .cls-2 {
+        fill: $sub-brand-color;
+
+        // Hover: Change the circle color and show the location name
+        &:hover, &:hover + .cls-3 {
+          fill: $brand-color;
+          opacity: 1;
+        }
+      }
     }
 
-    img {
-      position: relative;
-      width: 80%;
-      margin: auto;          
+    // Hide the location names
+    .country-list {
+      display: none;
     }
   }
 }
 
-footer {
-  background-color: #fff;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.8rem;
+// Mobile View
+@media (max-width: 480px) {
+
+  // Hide the map
+  #map img, svg  {
+    display: none;
+  }
+
+  // Show the location names
+  #location #map .country-list {
+    display: block;
+    margin-top: 50px; 
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #d7e0e4;
+      background-color: #599fc0;
+      border-top: solid 1px #aaa;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    & a:last-child {
+      border-bottom: solid 1px #aaa;
+    }
+
+    & a:hover {
+      background-color: $brand-color;
+      color: $sub-brand-color;
+    }
+  }
 }

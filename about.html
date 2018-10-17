@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aya Matsubara - About</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,800" rel="stylesheet">
   <link rel="stylesheet" href="./css/min/main.css">
   <link rel="stylesheet" href="./css/min/about.css">
 </head>
@@ -17,10 +15,16 @@
     <div id="logo">
       <a href="index.html"><img id="logo-image" src="./img/logo.svg" alt=""></a>
     </div>
-    <nav id="main-nav">
-      <a href="index.html">HOME</a>
-      <a href="index.html#location">LOCATION</a>
-      <a href="about.html">ABOUT</a>
+    <nav>
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="links">
+        <a href="index.html">HOME</a>
+        <a href="index.html#location">LOCATION</a>
+        <a href="about.html">ABOUT</a>
+      </div>
     </nav>
   </header>
   <main>
@@ -44,10 +48,10 @@
       <textarea id="fmessage" cols="30" rows="10" style="overflow:auto" placeholder="Message*" value="" required></textarea>
       <input type="submit" id="send" name="send" value="Send">
     </form>
-
   </main>
-  <footer>© 2018 AYA MATSUBARA</footer>
-  <script src="./js/sendmessage.js" charset="utf-8"></script>
+  <footer>
+    <div id="copyright">© 2018 AYA MATSUBARA</div>
+  </footer>
 </body>
 
 </html>

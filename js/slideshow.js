@@ -3,17 +3,17 @@
   reference: https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
 // Manual slideshow
-function changeSlide (n) {
+function changeSlide(n) {
   showSlide(index += n)
 }
 
-function showSlide (n) {
+function showSlide(n) {
   const slides = document.getElementsByClassName('slideshow-img')
 
   // If the current slide is the last slide
   if (n > slides.length) {
     index = 1
-  // If the current slide is the first slide
+    // If the current slide is the first slide
   } else if (n < 1) {
     index = slides.length
   }
@@ -30,7 +30,7 @@ let index = 1
 showSlide(index)
 
 // Automatic slideshow
-function carousel () {
+function carousel() {
   const slides = document.getElementsByClassName('slideshow-img')
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none'
@@ -40,7 +40,7 @@ function carousel () {
     slideIndex = 1
   }
   slides[slideIndex - 1].style.display = 'block'
-  setTimeout(carousel, 4000)
+  setTimeout(carousel, 3000)
 }
 let slideIndex = 0
 carousel()
