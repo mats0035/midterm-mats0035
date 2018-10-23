@@ -1,0 +1,64 @@
+@import 'normalize';
+@import 'base';
+
+body {
+  background-color: #eee;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  min-height: calc(100vh - 34px);
+  #about-me {
+    width: 40%;
+    margin: 100px 20px;
+  
+    #portfolio {
+      color: $brand-color;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    width: 40%;
+  
+    input, textarea {
+      margin: 10px;
+      padding: 5px;
+      width: 100%;
+      border: none;
+      box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    input:nth-last-child(2) {
+      height: 10rem;
+    }
+
+    #send {
+      background-color: $brand-color;
+      box-shadow: none;
+      margin: 20px 30px;
+      padding: 10px;
+      width: 100px;
+      align-self: flex-start;
+      color: $sub-text-color;
+    }
+  } 
+}
+
+// Mobile/Tablet View
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items:center;
+
+    #about-me, form {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import 'normalize';
+@import 'base';
+@import 'header';
+@import 'footer';
+
+// Setting for the top slideshow area
+#front-page {
+  height: 100vh;
+
+  #slideshow {
+    height: 550px;
+
+    .slideshow-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 884px;
+      height: 450px;
+      margin: auto;
+      transform: translate(-50%, -50%);
+    }
+
+    #arrows {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 860px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #left, #right {
+        display: inline-block;
+        padding: 10px;
+        margin: 0 5px;
+        border: solid #fff;
+        border-width: 0 5px 5px 0;
+      }
+      
+      #left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+      
+      #right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+  }
+
+  #scroll {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #scroll-line {
+      width: 2px;
+      height: 30px;
+      margin:5px;
+      background-color: $text-color;
+    }
+  }
+}
+
+// Setting for the bottom map area
+#location {
+  position: relative;
+  height: 100vh;
+  background: url(../../img/paper_background.jpg);
+  background-size: cover;
+
+  h1 {
+    padding-top: 120px;
+    color: #fff;
+  }
+
+  #map {
+    img, svg {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      height: 70%;
+      margin: auto;
+      transform: translateX(-50%);
+
+      .cls-1 {
+        fill: none;
+      }
+
+      // Location name setting
+      .cls-3 {
+        font-size: 30px;
+        fill: $brand-color;
+        font-family: Didot-Bold, Didot;
+        font-weight: 700;
+        opacity: 0;
+      }
+
+      //  Yellow circle buttons
+      .cls-2 {
+        fill: $sub-brand-color;
+
+        // Hover: Change the circle color and show the location name
+        &:hover, &:hover + .cls-3 {
+          fill: $brand-color;
+          opacity: 1;
+        }
+      }
+    }
+
+    // Hide the location names
+    .country-list {
+      display: none;
+    }
+  }
+}
+
+// Mobile View
+@media (max-width: 480px) {
+
+  // Hide the map
+  #map img, svg  {
+    display: none;
+  }
+
+  // Show the location names
+  #location #map .country-list {
+    display: block;
+    margin-top: 50px; 
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #d7e0e4;
+      background-color: #599fc0;
+      border-top: solid 1px #aaa;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    & a:last-child {
+      border-bottom: solid 1px #aaa;
+    }
+
+    & a:hover {
+      background-color: $brand-color;
+      color: $sub-brand-color;
+    }
+  }
+}
