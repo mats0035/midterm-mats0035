@@ -1,0 +1,143 @@
+@import 'base';
+@import 'normalize';
+
+h1 {
+  color: $brand-color;
+  font-family: $font-header;
+  font-size: 4rem;
+  margin: 0;
+  padding: 120px 0 20px;
+
+}
+
+#container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  margin: 30px;
+
+  .gallery {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }  
+    }
+  }
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #111;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.modal-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  min-width: 600px;
+  height: auto;
+  margin: auto;
+  display: none;
+  z-index:1000;
+}
+
+#close, .modal-text {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+#close {
+  bottom: 5%;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.search-button {
+  text-align: center;
+  margin: 50px;
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: $brand-color; 
+    font-weight: bold; 
+    font-size: 2rem;
+  }
+
+  & a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    background: $brand-color;
+    transition: width 0.3s;
+  }
+
+  & a:hover::after {
+    width: 100%;
+  }
+}
+
+// Change the number of rows based on the number of columns
+@media (max-width: 1364px) {
+  #container {
+    grid-template-rows: repeat(3, 300px);    
+  }
+}
+
+@media (max-width: 1034px) {
+  #container {
+    grid-template-rows: repeat(4, 300px);    
+  }
+}
+
+@media (max-width: 704px) {
+  #container {
+    grid-template-rows: repeat(8, 300px);    
+  }
+  
+  .modal-image {
+    min-width: 100%;
+  }
+}
